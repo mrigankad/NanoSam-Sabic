@@ -110,7 +110,10 @@ class Settings(BaseSettings):
     # If True, inspection continues normally when VLM errors — just no description
     VLM_FALLBACK_ON_ERROR: bool = True
 
-    model_config = {"env_file": ".env", "case_sensitive": True}
+    model_config = {
+        "env_file": str(Path(__file__).parent.parent.parent / ".env"), 
+        "case_sensitive": True
+    }
 
 
 # Global settings instance
