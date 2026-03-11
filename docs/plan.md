@@ -105,11 +105,11 @@ graph TD
 **Goal:** Single-use case proof of concept
 
 **Features:**
-- [ ] Web-based image capture interface
-- [ ] Pre-trained COCO detection + 3 custom defect types
-- [ ] Basic segmentation mask visualization
-- [ ] Pass/Fail decision with confidence threshold
-- [ ] Simple CSV export of results
+- [x] Web-based image capture interface
+- [x] Pre-trained COCO detection + 3 custom defect types
+- [x] Basic segmentation mask visualization
+- [x] Pass/Fail decision with confidence threshold
+- [x] Simple CSV export of results
 
 **Deliverables:**
 - Deployable at 1 pilot customer site
@@ -126,17 +126,17 @@ graph TD
 **Goal:** Production-ready for single station deployment
 
 **New Features:**
-- [ ] Real-time video stream processing (not just images)
-- [ ] Multi-object tracking across conveyor belt
-- [ ] Measurement tools (area, length, angle from segmentation)
-- [ ] Integration APIs: Modbus TCP, MQTT, REST
-- [ ] Alert system (email/SMS/webhook on defect detection)
-- [ ] Role-based access control (operator vs. admin vs. engineer)
+- [x] Real-time video stream processing (not just images)
+- [x] Multi-object tracking across conveyor belt
+- [x] Measurement tools (area, length, angle from segmentation)
+- [x] Integration APIs: Modbus TCP, MQTT, REST
+- [x] Alert system (email/SMS/webhook on defect detection)
+- [x] Role-based access control (operator vs. admin vs. engineer)
 
 **Technical Enhancements:**
-- [ ] Model quantization (INT8) for 2x speedup
-- [ ] Active learning pipeline (flag uncertain predictions for review)
-- [ ] Automatic model retraining workflow
+- [x] Model quantization (INT8) for 2x speedup
+- [x] Active learning pipeline (flag uncertain predictions for review)
+- [x] Automatic model retraining workflow
 - [ ] Offline mode (queue inspections during network outage)
 
 **Deliverables:**
@@ -150,16 +150,16 @@ graph TD
 **Goal:** Multi-station, enterprise deployment
 
 **New Features:**
-- [ ] Centralized model management (deploy models to multiple stations)
-- [ ] Analytics dashboard (defect trends, station performance, OEE correlation)
+- [x] Centralized model management (deploy models to multiple stations)
+- [x] Analytics dashboard (defect trends, station performance, OEE correlation)
 - [ ] Multi-tenant SaaS option
 - [ ] Mobile app for managers (view alerts, approve retrain data)
-- [ ] PLC direct integration (Siemens, Allen-Bradley, Mitsubishi)
+- [x] PLC direct integration (Siemens, Allen-Bradley, Mitsubishi)
 
 **Technical Enhancements:**
-- [ ] Distributed processing architecture (Redis-based job queue)
+- [x] Distributed processing architecture (Redis-based job queue)
 - [ ] Edge-to-cloud sync (training data upload, model download)
-- [ ] Model versioning and A/B testing
+- [x] Model versioning and A/B testing
 - [ ] Hardware certification (IP ratings for industrial environments)
 
 **Deliverables:**
@@ -352,15 +352,15 @@ graph TD
 
 ### Week 1-2: Foundation
 - [x] Finalize brand name (**Ussop**) and incorporate
-- [ ] Set up development environment and CI/CD
-- [ ] Create initial Docker container with current stack
-- [ ] Document API contracts
+- [x] Set up development environment and CI/CD
+- [x] Create initial Docker container with current stack
+- [x] Document API contracts
 
 ### Week 3-4: MVP Build
-- [ ] Build web interface for image upload/viewing
-- [ ] Implement basic pass/fail logic
-- [ ] Create CSV export functionality
-- [ ] Set up first test station in lab
+- [x] Build web interface for image upload/viewing
+- [x] Implement basic pass/fail logic
+- [x] Create CSV export functionality
+- [x] Set up first test station in lab
 
 ### Week 5-8: Pilot Preparation
 - [ ] Identify 3 pilot customers
