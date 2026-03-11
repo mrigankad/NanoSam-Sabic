@@ -1,12 +1,20 @@
 <div align="center">
-  <img src="ussop/frontend/src/assets/logo.png" alt="Ussop Logo" width="200" />
+  <img src="ussop/frontend/src/assets/logo.png" alt="Ussop Logo" width="180" style="margin-bottom: 20px;" />
+  <h1 align="center">Ussop Visual Inspection Engine</h1>
+  <p align="center">
+    <strong>"I am the Sniper King!" — Ussop's precision, now for your production line.</strong>
+  </p>
+  
+  <p align="center">
+    <img src="https://img.shields.io/badge/Status-Active-success.svg" alt="Status" />
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python" />
+    <img src="https://img.shields.io/badge/FastAPI-0.100+-green.svg" alt="FastAPI" />
+    <img src="https://img.shields.io/badge/React-18+-61DAFB.svg" alt="React" />
+    <img src="https://img.shields.io/badge/License-MIT-purple.svg" alt="License" />
+  </p>
 </div>
 
-# Ussop — AI Visual Inspection for Manufacturing
-
-> **"I am the Sniper King!"** — Ussop's precision, now for your production line.
-
-Ussop is a production-ready, CPU-based AI visual inspection system that combines object detection (Faster R-CNN) with precise segmentation (NanoSAM) to automate quality control in manufacturing environments.
+Ussop is a premium, production-ready AI visual inspection system that combines high-speed object detection (Faster R-CNN) with precise edge segmentation (NanoSAM) to automate quality control in industrial manufacturing environments—all engineered to run exceptionally fast on standard CPUs.
 
 ## 🌟 Key Features
 
@@ -16,10 +24,42 @@ Ussop is a production-ready, CPU-based AI visual inspection system that combines
 ✅ **Cost-Effective** — 1/3 the price of competitors like Cognex
 ✅ **Industrial Grade** — Modbus TCP, MQTT, OPC-UA, REST API
 ✅ **Production Ready** — 70+ API endpoints, JWT auth, audit logging
-✅ **React SPA Frontend** — 10-page TypeScript UI, real-time WebSocket dashboard
-✅ **Multi-Station** — Centralized overview across all inspection stations
+✅ **Premium UI/UX** — Modern 'OS-in-Browser' TypeScript dashboard with fluid light & dark modes
+✅ **Real-Time Telemetry** — Live WebSockets rendering advanced Chart.js KPI analytics
+✅ **Multi-Station Fleet** — Centralized panoramic overview across all connected production lines
 ✅ **AI Query** — Natural language questions about your inspection data
 ✅ **On-Device Retraining** — Fine-tune models from active-learning annotations
+
+---
+
+## 💻 Modern Tech Stack
+
+<details>
+<summary><strong>Frontend (OS-in-Browser UI)</strong></summary>
+
+*   **React 18** (Vite + TypeScript)
+*   **Tailwind CSS** (Custom Olive Brand Tokens, Fluid Typography, 12px Radii System)
+*   **Radix UI** & **Phosphor Icons** (Accessible, Premium Aesthetics)
+*   **Chart.js** (Real-time Analytics, Scatter Plots & Pareto Visualizations)
+</details>
+
+<details>
+<summary><strong>Backend (Performant Web Engine)</strong></summary>
+
+*   **FastAPI** (Async, high-throughput REST + WebSockets)
+*   **SQLAlchemy** & **Alembic** (Robust ORM & Database Migrations)
+*   **PyJWT** (Secure RBAC Authentication & Session Management)
+*   **Redis & Prometheus** (Caching and Real-time Telemetry)
+</details>
+
+<details>
+<summary><strong>AI & Computer Vision Core</strong></summary>
+
+*   **PyTorch** & **OpenVINO** (CPU-Optimized Inference Engine)
+*   **Faster R-CNN** (Real-time Defect Object Detection)
+*   **NanoSAM** (Sub-millisecond Instance Segmentation)
+*   **Transformers/VLM** (Natural Language Scene Understanding)
+</details>
 
 ---
 
