@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="ussop/frontend/src/assets/logo.png" alt="Ussop Logo" width="200" />
+</div>
+
 # Ussop — AI Visual Inspection for Manufacturing
 
 > **"I am the Sniper King!"** — Ussop's precision, now for your production line.
