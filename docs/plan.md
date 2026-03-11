@@ -50,42 +50,31 @@ Named after the Straw Hat Pirates' sharpshooter, Ussop delivers sniper-precision
 
 ### 3.1 Core Technology Stack
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     HARDWARE LAYER                          │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
-│  │  USB/IP     │  │  Industrial │  │  Standard PC/       │  │
-│  │  Camera     │  │  Lighting   │  │  Edge Device (CPU)  │  │
-│  └──────┬──────┘  └─────────────┘  └─────────────────────┘  │
-└─────────┼───────────────────────────────────────────────────┘
-          │
-          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    INFERENCE ENGINE                         │
-│  ┌─────────────────┐    ┌───────────────────────────────┐   │
-│  │  Faster R-CNN   │───▶│  Object Detection (COCO+Custom)│   │
-│  │  (ResNet/Mobile)│    └───────────────┬───────────────┘   │
-│  └─────────────────┘                    │                    │
-│                                         ▼                    │
-│  ┌─────────────────┐    ┌───────────────────────────────┐   │
-│  │  NanoSAM        │◀───│  Bounding Box Prompts         │   │
-│  │  (ONNX Runtime) │    │  (1-N objects per image)      │   │
-│  └────────┬────────┘    └───────────────────────────────┘   │
-│           │                                                  │
-│           ▼                                                  │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  Post-Processing: Mask Refinement + Defect Analysis │    │
-│  └─────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────┘
-          │
-          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    APPLICATION LAYER                        │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
-│  │  Real-time   │  │  Analytics   │  │  Integration API │   │
-│  │  Dashboard   │  │  & Reporting │  │  (REST/Modbus)   │   │
-│  └──────────────┘  └──────────────┘  └──────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    subgraph HardwareLayer [HARDWARE LAYER]
+        Cam["USB/IP<br/>Camera"]
+        Light["Industrial<br/>Lighting"]
+        PC["Standard PC/<br/>Edge Device (CPU)"]
+    end
+
+    subgraph InferenceEngine [INFERENCE ENGINE]
+        FRCNN["Faster R-CNN<br/>(ResNet/Mobile)"] --> ObjDet["Object Detection (COCO+Custom)"]
+        ObjDet --> Prompts["Bounding Box Prompts<br/>(1-N objects per image)"]
+        Prompts --> NSAM["NanoSAM<br/>(ONNX Runtime)"]
+        NSAM --> PostProc["Post-Processing: Mask Refinement + Defect Analysis"]
+    end
+
+    subgraph ApplicationLayer [APPLICATION LAYER]
+        Dash["Real-time<br/>Dashboard"]
+        Ana["Analytics<br/>& Reporting"]
+        API["Integration API<br/>(REST/Modbus)"]
+    end
+
+    Cam --> FRCNN
+    PostProc --> Dash
+    PostProc --> Ana
+    PostProc --> API
 ```
 
 ### 3.2 Key Technical Components
